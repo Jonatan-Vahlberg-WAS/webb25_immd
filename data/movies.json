@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Interstellar",
+    "year": 2014,
+    "genres": ["Sci-Fi", "Drama"],
+    "durationMinutes": 169,
+    "director": "Christopher Nolan"
+  },
+  {
+    "title": "Barbie",
+    "year": 2023,
+    "genres": ["Comedy", "Fantasy"],
+    "durationMinutes": 114,
+    "director": "Greta Gerwig"
+  },
+  {
+    "title": "Dune: Part Two",
+    "year": 2024,
+    "genres": ["Sci-Fi", "Action", "Adventure"],
+    "durationMinutes": 166,
+    "director": "Denis Villeneuve"
+  },
+  {
+    "title": "Parasite",
+    "year": 2019,
+    "genres": ["Thriller", "Drama", "Comedy"],
+    "durationMinutes": 132,
+    "director": "Bong Joon-ho"
+  },
+  {
+    "title": "Triangle of Sadness",
+    "year": 2022,
+    "genres": ["Comedy", "Drama"],
+    "durationMinutes": 147,
+    "director": "Ruben Östlund"
+  },
+  {
+    "title": "Lost in Translation",
+    "year": 2003,
+    "genres": ["Drama", "Romance"],
+    "durationMinutes": 102,
+    "director": "Sofia Coppola"
+  },
+  {
+    "title": "The Wolf of Wall Street",
+    "year": 2013,
+    "genres": ["Biography", "Comedy", "Crime"],
+    "durationMinutes": 180,
+    "director": "Martin Scorsese"
+  }
+]

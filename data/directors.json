@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Christopher Nolan",
+    "birthYear": 1970,
+    "nationality": "UK"
+  },
+  {
+    "name": "Greta Gerwig",
+    "birthYear": 1983,
+    "nationality": "USA"
+  },
+  {
+    "name": "Denis Villeneuve",
+    "birthYear": 1967,
+    "nationality": "Canada"
+  },
+  {
+    "name": "Bong Joon-ho",
+    "birthYear": 1969,
+    "nationality": "South Korea"
+  },
+  {
+    "name": "Sofia Coppola",
+    "birthYear": 1971,
+    "nationality": "USA"
+  },
+  {
+    "name": "Ruben Östlund",
+    "birthYear": 1974,
+    "nationality": "Sweden"
+  },
+  {
+    "name": "Martin Scorsese",
+    "birthYear": 1942,
+    "nationality": "USA"
+  }
+]
