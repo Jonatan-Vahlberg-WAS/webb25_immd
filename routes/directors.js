@@ -6,6 +6,7 @@ import {
   updateDirector,
   deleteDirector,
 } from "../db/directors.js"
+import { getAllMovies, deleteMovie } from "../db/movies.js"
 
 const directorRouter = Router()
 
@@ -21,7 +22,7 @@ directorRouter.post("/", async (req, res) => {
     typeof nationality !== "string"
   ) {
     return res.status(400).json({
-      message: "Name, birth year and nationality is required",
+      message: "Name, birth year and nationality are required",
     })
   }
   const director = await createDirector({ name, birthYear, nationality })
@@ -84,9 +85,18 @@ directorRouter.put("/:id", async (req, res) => {
 // DELETE /api/directors/:id (ta bort)
 directorRouter.delete("/:id", async (req, res) => {
   const id = req.params.id
-  console.log(id)
+
+  const director = await getDirectorById(id)
+  const movies = await getAllMovies()
+  const selectedMovies = movies.filter((m) => m.director === director.name)
+  console.log("what is selectedmovies " + selectedMovies)
+  const deletedMoviesCount = selectedMovies.length
+  selectedMovies.map((m) => {
+    console.log(m.id)
+    deleteMovie(m.id)
+  })
+
   const deleted = await deleteDirector(id)
-  console.log(deleted)
 
   if (!deleted) {
     return res.status(404).json({
@@ -94,7 +104,15 @@ directorRouter.delete("/:id", async (req, res) => {
     })
   }
 
-  return res.status(204).json()
+  return res.status(200).json({
+    deletedDirector: {
+      _id: director.id,
+      name: director.name,
+      birthYear: director.birthYear,
+      nationality: director.nationality,
+    },
+    deletedMoviesCount: deletedMoviesCount,
+  })
 })
 
 export default directorRouter
